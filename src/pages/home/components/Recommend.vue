@@ -4,7 +4,7 @@
     <ul>
       <li
         class="item border-bottom"
-        v-for="item of recommendList"
+        v-for="item of list"
         :key="item.id"
       >
         <img class="item-img" :src="item.imgUrl" />
@@ -21,25 +21,8 @@
 <script>
   export default {
     name: 'HomeRecommend',
-    data () {
-      return {
-        recommendList: [{
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1612/1d/1d9a740c1f9e0efaa3.img.jpg_200x200_63285bd9.jpg',
-          title: '成都海昌极地公园',
-          desc: '浪漫成都，浪漫的海洋主题乐园'
-        },{
-          id: '0002',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1612/1d/1d9a740c1f9e0efaa3.img.jpg_200x200_63285bd9.jpg',
-          title: '成都海昌极地公园',
-          desc: '浪漫成都，浪漫的海洋主题乐园'
-        },{
-          id: '0003',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1612/1d/1d9a740c1f9e0efaa3.img.jpg_200x200_63285bd9.jpg',
-          title: '成都海昌极地公园',
-          desc: '浪漫成都，浪漫的海洋主题乐园'
-        }]
-      }
+    props:{
+      list:Array
     }
   }
 </script>
