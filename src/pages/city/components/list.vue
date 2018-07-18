@@ -46,8 +46,12 @@
 </template>
 
 <script>
+  import Bscroll from 'better-scroll'
   export default {
-    name: 'CityList'
+    name: 'CityList',
+    mounted(){
+      this.scroll = new Bscroll(this.$refs.wrapper)
+    }
   }
 </script>
 
@@ -69,7 +73,7 @@
     right:0
     bottom:0
     .title
-      line-height: .44rem
+      line-height: .54rem
       background :#eee
       padding-left : .2rem
       color:#666
